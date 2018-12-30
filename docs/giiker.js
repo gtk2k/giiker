@@ -412,10 +412,3 @@ export class Giiker extends EventEmitter {
   }
 }
 
-const connect = async () => {
-  const giiker = new Giiker();
-  await giiker.connect();
-  return giiker;
-};
-
-module.exports = {connect};
