@@ -1,4 +1,4 @@
-import {Giiler} from './giiker.js';
+import {Giiker} from './giiker.js';
 
 const button = document.querySelector('button');
 const textarea = document.querySelector('textarea');
