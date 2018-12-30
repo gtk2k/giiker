@@ -1,4 +1,4 @@
-import GiiKER from './giiker.js';
+import {Giiler} from './giiker.js';
 
 const button = document.querySelector('button');
 const textarea = document.querySelector('textarea');
@@ -7,7 +7,13 @@ button.addEventListener('click', async () => {
   button.classList.add('is-loading');
   button.disabled = true;
 
-  const giiker = await GiiKER.connect();
+  const connect = async () => {
+    const giiker = new Giiker();
+    await giiker.connect();
+    return giiker;
+  };
+
+  const giiker = await connect();
   button.classList.remove('is-loading');
   button.textContent = 'Connected!';
 

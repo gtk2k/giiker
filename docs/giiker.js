@@ -123,7 +123,7 @@ class EventEmitter {
   }
 }
 
-class Giiker extends EventEmitter {
+export class Giiker extends EventEmitter {
   constructor() {
     super();
     this._onCharacteristicValueChanged = this._onCharacteristicValueChanged.bind(this);
